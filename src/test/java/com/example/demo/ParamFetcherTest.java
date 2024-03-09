@@ -43,7 +43,7 @@ class ParamFetcherTest {
         RecordedRequest recordedRequest = mockWebServer.takeRequest();
 
         // then
-        Assertions.assertEquals("/input-param", recordedRequest.getPath());
+        Assertions.assertEquals("/param", recordedRequest.getPath());
         Assertions.assertEquals("Bearer " + API_KEY, recordedRequest.getHeader("Authorization"));
         Assertions.assertEquals("someParam", param.getParam());
     }
